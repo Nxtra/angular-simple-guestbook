@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Message} from '../message';
 
 @Component({
   selector: 'app-guestbook',
@@ -8,7 +9,15 @@ import {Component, Input, OnInit} from '@angular/core';
 export class GuestbookComponent implements OnInit {
 
   @Input()
-  name: string = 'jolo';
+  name = 'jolo';
+
+
+  @Input()
+  message: Message = {
+    Author: 'Nick',
+    Date: '9023090294902',
+    Message: 'This is a default message'
+  };
 
   ngOnInit() {
   }

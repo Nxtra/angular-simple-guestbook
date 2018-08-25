@@ -15,7 +15,7 @@ body {
 }
 
 .card {
-  width:300px;
+  width: calc(100% / 4);
   min-height:400px;
   background:#fff;
   box-shadow:0 20px 50px rgba(0,0,0,.1);
@@ -66,6 +66,7 @@ body {
 }
 .card .box span {
   display:inline-flex;
+  margin-top: 10px;
 }
 .card .box ul {
   margin:0;
@@ -87,3 +88,4 @@ body {
   color:#e91e63;
   transform:rotateY(360deg);
 }
+
