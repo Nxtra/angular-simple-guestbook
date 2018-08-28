@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Message} from '../message';
 
 @Component({
@@ -6,11 +6,13 @@ import {Message} from '../message';
   templateUrl: './guestbook.component.html',
   styleUrls: ['./guestbook.component.css']
 })
+
 export class GuestbookComponent implements OnInit {
 
   @Input()
   name = 'jolo';
 
+  @HostBinding('class') class = ['col-sm-12 col-md-6 col-lg-3'];
 
   @Input()
   message: Message = {
