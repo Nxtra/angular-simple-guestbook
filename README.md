@@ -4,7 +4,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
+
+## Run with Docker
+- ng build --prod
+- docker build -t guestbook .  
+- docker run -p 4200:80 --name guestbook guestbook  
+  
+Navigate to localhost:4200 where the app should be running
+
+### docker extra's
+- exec into the container :  
+docker exec -it guestbook /bin/sh
+
 
 ## Code scaffolding
 
